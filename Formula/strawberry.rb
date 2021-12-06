@@ -5,14 +5,14 @@
 class Strawberry < Formula
   desc "An awesome static site generator based on Hugo."
   homepage "https://www.StrawberrySSG.com"
-  version "0.20.0"
+  version "0.20.1"
   bottle :unneeded
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/strawberryssg/strawberry-v0/releases/download/v0.20.0/strawberry-v0.20.0-macos-amd64.tar.gz"
-      sha256 "a8c20068b75e7693cd78e480847b64a32ed11117dba05c82e8073463759ba8d0"
+      url "https://github.com/strawberryssg/strawberry-v0/releases/download/v0.20.1/strawberry-v0.20.1-macos-amd64.tar.gz"
+      sha256 "c7c4eaef41cb06923d31e514c71f03671bb1e5b6464e6f5ec1a15f074588b7fa"
     end
   end
 
