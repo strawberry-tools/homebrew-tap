@@ -5,13 +5,13 @@
 class Strawberry < Formula
   desc "An awesome static site generator based on Hugo."
   homepage "https://www.StrawberrySSG.com"
-  version "0.21.0"
+  version "0.22.0"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/strawberryssg/strawberry-v0/releases/download/v0.21.0/strawberry-v0.21.0-macos-amd64.tar.gz"
-      sha256 "95400ea8935a659333d716f9ce34a103b05f5a691afcc369f6f32b64b9bf3dad"
+      url "https://github.com/strawberryssg/strawberry-v0/releases/download/v0.22.0/strawberry-v0.22.0-macos-amd64.tar.gz"
+      sha256 "12812875d6b8663112cbbbe1f0dfa1a29cd8c95c4f5248d4caf1b258316d1f55"
 
       def install
         bin.install "strawberry"
