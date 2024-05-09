@@ -5,25 +5,25 @@
 class Strawberry < Formula
   desc "An awesome static site generator based on Hugo."
   homepage ""
-  version "0.24.0"
+  version "0.24.1"
 
   depends_on "go"
   depends_on :macos
 
-  url "https://github.com/strawberry-tools/strawberry/releases/download/v0.24.0/strawberry-v0.24.0-macos-amd64.tar.gz"
-  sha256 "6c217cb0c58f05203462a61c62175d6c752ade67364271a63afdb44648548f2c"
+  if Hardware::CPU.intel?
+    url "https://github.com/strawberry-tools/strawberry/releases/download/v0.24.1/strawberry-v0.24.1-macos-amd64.tar.gz"
+    sha256 "cdf7c6d9e7e122c5e3509bda2a321c6dfc4057e34093e75183ee6148d2f8bfab"
 
-  def install
-    bin.install "strawberry"
+    def install
+      bin.install "strawberry"
+    end
   end
-
   if Hardware::CPU.arm?
-    def caveats
-      <<~EOS
-        The darwin_arm64 architecture is not supported for the Strawberry
-        formula at this time. The darwin_amd64 binary may work in compatibility
-        mode, but it might not be fully supported.
-      EOS
+    url "https://github.com/strawberry-tools/strawberry/releases/download/v0.24.1/strawberry-v0.24.1-macos-arm64.tar.gz"
+    sha256 "6983dee75f2c14eaf820e446d23432fe95c77f7ac5ec9dd80cc4f0d2be69e0ca"
+
+    def install
+      bin.install "strawberry"
     end
   end
 
